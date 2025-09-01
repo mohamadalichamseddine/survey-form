@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1 id="title">Software learning goals</h1>
+    <p id="description">Please complete this short survey to help you reach your goals</p>
+
+    <form id="survey-form" action="#" method="post">
+      <!-- Name -->
+      <div class="form-group">
+        <label id="name-label" for="name">Name</label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          placeholder="Enter your full name"
+          required
+          autocomplete="name"
+        />
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label id="email-label" for="email">Email</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="example@domain.com"
+          required
+          autocomplete="email"
+        />
+      </div>
+
+      <!-- Number -->
+      <div class="form-group">
+        <label id="number-label" for="number">Years of coding experience</label>
+        <input
+          id="number"
+          name="experience"
+          type="number"
+          placeholder="0"
+          min="0"
+          max="50"
+        />
+        <small class="hint">Enter a number from 0 to 50.</small>
+      </div>
+
+      <!-- Dropdown -->
+      <div class="form-group">
+        <label for="dropdown">Primary learning goal</label>
+        <select id="dropdown" name="goal" required>
+          <option value="">Select one...</option>
+          <option value="find-job">Get a developer job</option>
+          <option value="build-projects">Build personal projects</option>
+          <option value="upskill">Upskill for current role</option>
+        </select>
+      </div>
+
+      <!-- Radio group -->
+      <fieldset class="form-group">
+        <legend>Preferred study pace</legend>
+        <label><input type="radio" name="pace" value="part-time" /> Part-time</label>
+        <label><input type="radio" name="pace" value="full-time" /> Full-time</label>
+        <label><input type="radio" name="pace" value="intensive" /> Bootcamp</label>
+      </fieldset>
+
+      <!-- Checkboxes -->
+      <fieldset class="form-group">
+        <legend>Topics you’re interested in (select all that apply)</legend>
+		<label><input type="checkbox" name="topics" value="cpp" /> C++</label>
+		<label><input type="checkbox" name="topics" value="java" /> Java</label>
+        <label><input type="checkbox" name="topics" value="html" /> HTML</label>
+        <label><input type="checkbox" name="topics" value="css" /> CSS</label>
+        <label><input type="checkbox" name="topics" value="javascript" /> JavaScript</label>
+        <label><input type="checkbox" name="topics" value="react" /> React</label>
+      </fieldset>
+
+      <!-- Textarea -->
+      <div class="form-group">
+        <label for="comments">Additional comments</label>
+        <textarea id="comments" name="comments" rows="5" placeholder="Share anything else that would help us tailor your learning path."></textarea>
+      </div>
+
+      <!-- Submit -->
+      <div class="form-group">
+        <button id="submit" type="submit">Submit</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
